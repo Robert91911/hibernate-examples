@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-dic-2019 23:37:28 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+ <class name="seguro.Seguro" table="seguro">
+  <id name="idSeguro" type="int">
+   <column name="IDSEGURO"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="nif" type="java.lang.String">
+   <column name="NIF"/>
+  </property>
+  <property generated="never" lazy="false" name="nombre" type="java.lang.String">
+   <column name="NOMBRE"/>
+  </property>
+  <property generated="never" lazy="false" name="ape1" type="java.lang.String">
+   <column name="APE1"/>
+  </property>
+  <property generated="never" lazy="false" name="ape2" type="java.lang.String">
+   <column name="APE2"/>
+  </property>
+  <property generated="never" lazy="false" name="edad" type="java.lang.Integer">
+   <column name="EDAD"/>
+  </property>
+  <property generated="never" lazy="false" name="sexo" type="java.lang.Integer">
+   <column name="SEXO"/>
+  </property>
+  <property generated="never" lazy="false" name="casado" type="java.lang.Character">
+   <column name="CASADO"/>
+  </property>
+  <property generated="never" lazy="false" name="numHijos" type="java.lang.Integer">
+   <column name="NUMHIJOS"/>
+  </property>
+  <property generated="never" lazy="false" name="fechaCreacion" type="java.util.Date">
+   <column name="FECHACREACION"/>
+  </property>
+  <property generated="never" lazy="false" name="tipoSeguro" type="java.lang.String">
+   <column name="TIPOSEGURO"/>
+  </property>
+ </class>
+</hibernate-mapping>

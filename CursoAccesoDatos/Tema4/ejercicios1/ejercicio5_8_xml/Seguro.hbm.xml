@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27-may-2015 9:27:42 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="ejercicios1.ejercicio5_8_xml.Seguro" table="SEGURO1">
+		<id name="idSeguro" type="int">
+			<column name="IDSEGURO" />
+			<generator class="identity" />
+		</id>
+		<property name="nif" type="java.lang.String">
+			<column name="NIF" />
+		</property>
+		<property name="nombre" type="java.lang.String">
+			<column name="NOMBRE" />
+		</property>
+		<property name="ape1" type="java.lang.String">
+			<column name="APE1" />
+		</property>
+		<property name="ape2" type="java.lang.String">
+			<column name="APE2" />
+		</property>
+		<property name="edad" type="int">
+			<column name="EDAD" />
+		</property>
+		<property name="numHijos" type="int">
+			<column name="NUMHIJOS" />
+		</property>
+		<property name="esMayorEdad" formula="edad>18">
+		</property>
+		<property name="sexo">
+			<column name="SEXO" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">4</param>
+				<param name="enumClass">ejercicios1.ejercicio5_8_xml.Seguro$TipoSexo</param>
+			</type>
+		</property>
+		<property name="tipo">
+			<column name="TIPOSEGURO" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">ejercicios1.ejercicio5_8_xml.Seguro$TipoSeguro</param>
+			</type>
+		</property>
+		<property name="casado" type="yes_no">
+			<column name="CASADO" />
+		</property>
+		<property name="fechaCreacion" type="java.util.Date">
+			<column name="FECHACREACION" />
+		</property>
+		<property name="fechaNacimiento" type="date">
+			<column name="FECHANACIMIENTO" />
+		</property>
+		<property name="horaContacto" type="time">
+			<column name="HORACONTACTO" />
+		</property>
+		<!-- En el caso de cadenas debemos indicar que es tipo text -->
+		<property name="comentarios" type="text">
+			<column name="COMENTARIOS"/>
+		</property>
+		<!-- Los tipos binarios no hace falta especificarlos, podríamos poner binary -->
+		<property name="claves">
+			<column name="CLAVES"/>
+		</property>
+	</class>
+</hibernate-mapping>

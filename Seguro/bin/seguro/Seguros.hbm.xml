@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-dic-2019 19:34:15 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="seguro.Seguros" table="SEGUROS">
+        <id name="idSeguro" type="int">
+            <column name="IDSEGURO" />
+            <generator class="assigned" />
+        </id>
+        <property name="nif" type="java.lang.String">
+            <column name="NIF" />
+        </property>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="ape1" type="java.lang.String">
+            <column name="APE1" />
+        </property>
+        <property name="ape2" type="java.lang.String">
+            <column name="APE2" />
+        </property>
+        <property name="edad" type="int">
+            <column name="EDAD" />
+        </property>
+        <property name="numHijos" type="int">
+            <column name="NUMHIJOS" />
+        </property>
+        <property name="fechaCreacion" type="java.util.Date">
+            <column name="FECHACREACION" />
+        </property>
+    </class>
+</hibernate-mapping>

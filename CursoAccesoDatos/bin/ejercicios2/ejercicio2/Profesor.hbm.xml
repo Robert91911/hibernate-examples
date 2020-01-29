@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-may-2015 12:05:24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ejercicios2.ejercicio2.Profesor" table="PROFESOR">
+         <id name="id" type="int">
+            <generator class="foreign">
+            <param name="property">Direccion</param>
+        </generator>
+        </id>
+         <one-to-one name="Direccion" constrained="true" cascade="all"/>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="ape1" type="java.lang.String">
+            <column name="APE1" />
+        </property>
+        <property name="ape2" type="java.lang.String">
+            <column name="APE2" />
+        </property>
+        <!-- También se puede poner así -->
+       <!--   <one-to-one name="direccion" class="ejercicios2.ejercicio2.Direccion" constrained="true" cascade="all"></one-to-one>-->
+    </class>
+</hibernate-mapping>
